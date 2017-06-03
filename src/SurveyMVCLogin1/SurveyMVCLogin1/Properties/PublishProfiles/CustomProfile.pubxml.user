@@ -175,10 +175,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/27/2016 14:50:24</publishTime>
     </File>
     <File Include="bin/SurveyMVCLogin1.dll">
-      <publishTime>05/29/2017 07:29:37</publishTime>
+      <publishTime>06/03/2017 16:58:50</publishTime>
     </File>
     <File Include="bin/SurveyMVCLogin1.pdb">
-      <publishTime>05/29/2017 07:29:37</publishTime>
+      <publishTime>06/03/2017 16:58:50</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -332,6 +332,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
       <publishTime>05/28/2017 16:05:03</publishTime>
+    </File>
+    <File Include="Views/Results/Create.cshtml">
+      <publishTime>06/03/2017 15:35:44</publishTime>
+    </File>
+    <File Include="Views/Results/Delete.cshtml">
+      <publishTime>06/03/2017 15:35:45</publishTime>
+    </File>
+    <File Include="Views/Results/Details.cshtml">
+      <publishTime>06/03/2017 15:35:45</publishTime>
+    </File>
+    <File Include="Views/Results/Edit.cshtml">
+      <publishTime>06/03/2017 15:35:45</publishTime>
+    </File>
+    <File Include="Views/Results/Index.cshtml">
+      <publishTime>06/03/2017 15:35:45</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>05/28/2017 16:05:03</publishTime>

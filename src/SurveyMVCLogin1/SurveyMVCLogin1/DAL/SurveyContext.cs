@@ -1,8 +1,8 @@
-﻿using SurveyMVCBase1.Models;
+﻿using SurveyMVCLogin1.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace SurveyMVCBase1.DAL
+namespace SurveyMVCLogin1.DAL
 {
     public class SurveyContext : DbContext
     {

@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.ModelBinding;
 using System.Web.Mvc;
 
-namespace SurveyMVCBase1.Models
+namespace SurveyMVCLogin1.Models
 {
     /* 以下做更改需要备份有效数据库数据，不然数据会全部丢失 ！ */
     public class Survey

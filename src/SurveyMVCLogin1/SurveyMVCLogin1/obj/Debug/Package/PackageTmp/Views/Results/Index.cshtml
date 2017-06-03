@@ -1,0 +1,1107 @@
+﻿@model IEnumerable<SurveyMVCLogin1.Models.Survey>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q1Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q2Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q3Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q3Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q4Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q5Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q6Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q6Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q7Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q8Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q9Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q10Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q10Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q11Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q11Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q12Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q13Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q13Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q14Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q15Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S1Q16Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q1Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q1Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q2Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q2Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q3Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q3Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q4Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q4Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q5Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q5Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q6Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q6Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q7Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q7Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q8Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q8Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q9Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q9Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q10Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S2Q10Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q1Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q1Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q2Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q2Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q3Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q3Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q4Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q4Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q5Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q5Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q6Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q6Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q7Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q7Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q8Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q8Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q9Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q9Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q10Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S3Q10Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ1Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ2Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ3Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ4Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ5Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ6Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ7Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ8Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ9Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ10Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ11Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ12Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ13Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ14Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ15Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ16Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ17Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ18Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ19Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ20Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ21Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ22Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ23Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ24Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ25Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ26Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ27Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ28Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ29Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ30Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ31Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ32Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ33Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ34Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ35Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ36Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ37Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ38Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ39Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ40Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ41Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ42Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ43Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ44Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ45Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ46Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ47Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ48Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ49Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ50Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ51Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ52Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ53Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ54Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ55Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ56Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4aQ57Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ1Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ2Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ3Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ4Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ5Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ6Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ7Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ8Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ9Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ10Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ11Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ12Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ13Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ14Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ15Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ16Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ17Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ18Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ19Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ20Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ21Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ22Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ23Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ24Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ25Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ26Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ27Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ28Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ29Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ30Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ31Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ32Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ33Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ34Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ35Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ36Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ37Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ38Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ39Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ40Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ41Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ42Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ43Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ44Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ45Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ46Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ47Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ48Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ49Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ50Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ51Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ52Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ53Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ54Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ55Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ56Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ57Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ58Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ59Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ60Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S4bQ61Answer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q1Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q2Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q3Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q3Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q4Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q5Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q6Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q6Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q7Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q8Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q9Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q10Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q10Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q11Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q11Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q12Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q13Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q13Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q14Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q15Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S1Q16Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q1Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q1Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q2Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q2Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q3Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q3Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q4Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q4Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q5Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q5Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q6Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q6Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q7Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q7Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q8Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q8Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q9Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q9Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q10Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S2Q10Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q1Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q1Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q2Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q2Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q3Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q3Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q4Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q4Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q5Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q5Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q6Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q6Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q7Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q7Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q8Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q8Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q9Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q9Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q10Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S3Q10Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ1Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ2Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ3Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ4Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ5Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ6Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ7Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ8Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ9Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ10Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ11Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ12Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ13Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ14Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ15Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ16Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ17Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ18Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ19Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ20Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ21Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ22Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ23Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ24Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ25Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ26Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ27Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ28Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ29Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ30Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ31Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ32Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ33Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ34Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ35Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ36Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ37Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ38Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ39Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ40Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ41Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ42Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ43Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ44Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ45Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ46Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ47Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ48Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ49Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ50Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ51Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ52Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ53Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ54Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ55Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ56Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4aQ57Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ1Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ2Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ3Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ4Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ5Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ6Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ7Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ8Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ9Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ10Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ11Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ12Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ13Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ14Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ15Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ16Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ17Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ18Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ19Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ20Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ21Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ22Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ23Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ24Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ25Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ26Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ27Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ28Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ29Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ30Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ31Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ32Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ33Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ34Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ35Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ36Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ37Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ38Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ39Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ40Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ41Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ42Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ43Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ44Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ45Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ46Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ47Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ48Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ49Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ50Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ51Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ52Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ53Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ54Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ55Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ56Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ57Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ58Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ59Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ60Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S4bQ61Answer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SurveyID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SurveyID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SurveyID })
+        </td>
+    </tr>
+}
+
+</table>
