@@ -12,6 +12,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="ApplicationInsights.config">
       <publishTime>05/28/2017 16:05:09</publishTime>
     </File>
+    <File Include="App_Browsers/qt.browser">
+      <publishTime>06/04/2017 11:57:17</publishTime>
+    </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>02/22/2013 08:43:40</publishTime>
     </File>
@@ -26,6 +29,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>03/20/2017 14:10:54</publishTime>
+    </File>
+    <File Include="bin/itextsharp.xmlworker.dll">
+      <publishTime>03/20/2017 14:10:54</publishTime>
+    </File>
+    <File Include="bin/itextsharp.xtra.dll">
+      <publishTime>03/20/2017 14:10:50</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/30/2016 16:07:42</publishTime>
@@ -95,6 +107,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>11/27/2012 13:00:52</publishTime>
+    </File>
+    <File Include="bin/RazorPDF.dll">
+      <publishTime>10/13/2012 22:23:58</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>06/27/2016 14:50:24</publishTime>
@@ -174,11 +189,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>06/27/2016 14:50:24</publishTime>
     </File>
+    <File Include="bin/Rotativa.dll">
+      <publishTime>03/24/2015 15:16:18</publishTime>
+    </File>
     <File Include="bin/SurveyMVCLogin1.dll">
-      <publishTime>06/03/2017 16:58:50</publishTime>
+      <publishTime>06/04/2017 18:36:59</publishTime>
     </File>
     <File Include="bin/SurveyMVCLogin1.pdb">
-      <publishTime>06/03/2017 16:58:50</publishTime>
+      <publishTime>06/04/2017 18:36:59</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -232,7 +250,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2017 16:04:52</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>05/28/2017 16:05:11</publishTime>
+      <publishTime>06/04/2017 14:44:11</publishTime>
+    </File>
+    <File Include="Rotativa/wkhtmltopdf.exe">
+      <publishTime>06/04/2017 11:57:17</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>05/28/2017 16:04:57</publishTime>
@@ -337,16 +358,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/03/2017 15:35:44</publishTime>
     </File>
     <File Include="Views/Results/Delete.cshtml">
-      <publishTime>06/03/2017 15:35:45</publishTime>
+      <publishTime>06/03/2017 17:17:44</publishTime>
     </File>
     <File Include="Views/Results/Details.cshtml">
-      <publishTime>06/03/2017 15:35:45</publishTime>
+      <publishTime>06/04/2017 18:06:56</publishTime>
     </File>
     <File Include="Views/Results/Edit.cshtml">
-      <publishTime>06/03/2017 15:35:45</publishTime>
+      <publishTime>06/03/2017 17:17:44</publishTime>
     </File>
     <File Include="Views/Results/Index.cshtml">
-      <publishTime>06/03/2017 15:35:45</publishTime>
+      <publishTime>06/03/2017 17:17:44</publishTime>
+    </File>
+    <File Include="Views/Results/Pdf.cshtml">
+      <publishTime>06/04/2017 18:07:16</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>05/28/2017 16:05:03</publishTime>
@@ -355,7 +379,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2017 16:05:03</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/28/2017 16:05:03</publishTime>
+      <publishTime>06/04/2017 15:43:50</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>05/28/2017 16:05:03</publishTime>
@@ -367,7 +391,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2017 16:04:52</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/28/2017 18:23:12</publishTime>
+      <publishTime>06/04/2017 14:44:23</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -1,0 +1,29 @@
+﻿@model SurveyMVCLogin1.Models.Survey
+
+@{
+    ViewBag.Title = "pdfs";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Survey</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S1Q1Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q1Answer)
+        </dd>
+    </dl>
+</div>
