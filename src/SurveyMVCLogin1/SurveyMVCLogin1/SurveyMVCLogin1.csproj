@@ -285,6 +285,11 @@
     <Content Include="Views\Results\Edit.cshtml" />
     <Content Include="Views\Results\Index.cshtml" />
     <Content Include="Views\Results\Pdf.cshtml" />
+    <Content Include="Views\Pdf\Create.cshtml" />
+    <Content Include="Views\Pdf\Delete.cshtml" />
+    <Content Include="Views\Pdf\Details.cshtml" />
+    <Content Include="Views\Pdf\Edit.cshtml" />
+    <Content Include="Views\Pdf\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

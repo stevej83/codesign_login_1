@@ -15,6 +15,8 @@ using iTextSharp.tool.xml;
 using System.Drawing;
 using System.IO;
 using SurveyMVCLogin1.Utility;
+using System.Web.UI;
+using System.Text.RegularExpressions;
 
 namespace SurveyMVCLogin1.Controllers
 {
@@ -23,11 +25,13 @@ namespace SurveyMVCLogin1.Controllers
     {
         private SurveyContext db = new SurveyContext();
 
+
         // GET: Results
         public ActionResult Index()
         {
             return View(db.Surveys.ToList());
         }
+
 
         // GET: Results/Details/5
         public ActionResult Details(string id)
@@ -44,11 +48,13 @@ namespace SurveyMVCLogin1.Controllers
             return View(survey);
         }
 
+
         // GET: Results/Create
         public ActionResult Create()
         {
             return View();
         }
+
 
         // POST: Results/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -79,13 +85,61 @@ namespace SurveyMVCLogin1.Controllers
                 return HttpNotFound();
             }
 
+            //Uri baseUri = new Uri(Request.Url.OriginalString);
+
+            //System.Net.WebClient w = new System.Net.WebClient();
+
+            //w.Credentials = new System.Net.NetworkCredential("pdfadmin@pts.com", "Pdf2017@admin", "survey.mvc.login1");
+            //string webpage = w.DownloadString(url);
+
+            //NetworkCredential myCred = new NetworkCredential("test@cd.com", "2017@Admin", "localhost");
+
+            //WebClient w = new WebClient();
+            //w.Credentials = new NetworkCredential("test@cd.com", "2017@Admin");
+            //w.Credentials = myCred;
+            //string htmlText = w.DownloadString("http://survey.mvc.login1/Results/Details/122c1cd4-ebb2-4caf-857b-f6516041c565");
+
+
+
+
+
+            // the URL of the web page from where to retrieve the HTML code
+            string url = "http://survey.mvc.login1/Results/Details/122c1cd4-ebb2-4caf-857b-f6516041c565";
+
+            // create the HTTP request
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+            // Set credentials to use for this request
+            request.Credentials = CredentialCache.DefaultCredentials;
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            long contentLength = response.ContentLength;
+            string contentType = response.ContentType;
+
+            // Get the stream associated with the response
+            Stream receiveStream = response.GetResponseStream();
+
+            // Pipes the stream to a higher level stream reader with the required encoding format
+            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+
+            // get the HTML code of the web page
+            string htmlCode = readStream.ReadToEnd();
+
+            // close the response and response stream
+            response.Close();
+            readStream.Close();
+
+
+
+
+
+
+            byte[] pdfFile = this.ConvertHtmlTextToPDF(htmlCode);
+
+
             
 
-            //Uri baseUri = new Uri(Request.RawUrl.ToString());
-            WebClient wc = new WebClient();
-            //string htmlText = wc.DownloadString(baseUri);
-            string htmlText = wc.DownloadString(Request.Url.AbsoluteUri);
-            byte[] pdfFile = this.ConvertHtmlTextToPDF(htmlText);
+
 
             return File(pdfFile, "application/pdf", "result.pdf");
         }
@@ -120,9 +174,6 @@ namespace SurveyMVCLogin1.Controllers
             return outputStream.ToArray();
         }
 
-
-
-
         // GET: Results/Edit/5
         public ActionResult Edit(string id)
         {
@@ -137,6 +188,7 @@ namespace SurveyMVCLogin1.Controllers
             }
             return View(survey);
         }
+
 
         // POST: Results/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -154,6 +206,7 @@ namespace SurveyMVCLogin1.Controllers
             return View(survey);
         }
 
+
         // GET: Results/Delete/5
         public ActionResult Delete(string id)
         {
@@ -168,6 +221,7 @@ namespace SurveyMVCLogin1.Controllers
             }
             return View(survey);
         }
+
 
         // POST: Results/Delete/5
         [HttpPost, ActionName("Delete")]
