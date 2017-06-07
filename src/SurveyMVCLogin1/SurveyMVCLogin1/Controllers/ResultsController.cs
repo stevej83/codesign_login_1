@@ -17,6 +17,9 @@ using System.IO;
 using SurveyMVCLogin1.Utility;
 using System.Web.UI;
 using System.Text.RegularExpressions;
+using System.Collections.Specialized;
+using Org.BouncyCastle.Utilities.Collections;
+using Microsoft.AspNet.Identity;
 
 namespace SurveyMVCLogin1.Controllers
 {
@@ -73,6 +76,23 @@ namespace SurveyMVCLogin1.Controllers
             return View(survey);
         }
 
+        // Cookie-Aware WebClient
+        public class CookieAwareWebClient : WebClient
+        {
+            public CookieAwareWebClient()
+            {
+                CookieContainer = new CookieContainer();
+            }
+            public CookieContainer CookieContainer { get; private set; }
+
+            protected override WebRequest GetWebRequest(Uri address)
+            {
+                var request = (HttpWebRequest)base.GetWebRequest(address);
+                request.CookieContainer = CookieContainer;
+                return request;
+            }
+        }
+
         public ActionResult Pdf(string id)
         {
             if (id == null)
@@ -87,59 +107,27 @@ namespace SurveyMVCLogin1.Controllers
 
             //Uri baseUri = new Uri(Request.Url.OriginalString);
 
-            //System.Net.WebClient w = new System.Net.WebClient();
+            string htmlCode = "";
+            using (var client = new CookieAwareWebClient())
+            {
+                
+                // Authenticate (username and password can be either
+                //  hard-coded or pulled from a settings area)
+                var values = new NameValueCollection{
+                            { "UserName", "test@cd.com" },
+                            { "Password", "2017@Admin"},
+                    };
 
-            //w.Credentials = new System.Net.NetworkCredential("pdfadmin@pts.com", "Pdf2017@admin", "survey.mvc.login1");
-            //string webpage = w.DownloadString(url);
+                client.UploadValues("http://survey.mvc.login1/Account/Login", values);
 
-            //NetworkCredential myCred = new NetworkCredential("test@cd.com", "2017@Admin", "localhost");
+                htmlCode = client.DownloadString(Request.Url.OriginalString);
+            }
 
-            //WebClient w = new WebClient();
-            //w.Credentials = new NetworkCredential("test@cd.com", "2017@Admin");
-            //w.Credentials = myCred;
-            //string htmlText = w.DownloadString("http://survey.mvc.login1/Results/Details/122c1cd4-ebb2-4caf-857b-f6516041c565");
+            //MyWebClient WebClient = new MyWebClient();
 
-
-
-
-
-            // the URL of the web page from where to retrieve the HTML code
-            string url = "http://survey.mvc.login1/Results/Details/122c1cd4-ebb2-4caf-857b-f6516041c565";
-
-            // create the HTTP request
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-
-            // Set credentials to use for this request
-            request.Credentials = CredentialCache.DefaultCredentials;
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            long contentLength = response.ContentLength;
-            string contentType = response.ContentType;
-
-            // Get the stream associated with the response
-            Stream receiveStream = response.GetResponseStream();
-
-            // Pipes the stream to a higher level stream reader with the required encoding format
-            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-
-            // get the HTML code of the web page
-            string htmlCode = readStream.ReadToEnd();
-
-            // close the response and response stream
-            response.Close();
-            readStream.Close();
-
-
-
-
-
+            //string htmlCode = WebClient.DownloadString(new Uri(URL_status));
 
             byte[] pdfFile = this.ConvertHtmlTextToPDF(htmlCode);
-
-
-            
-
-
 
             return File(pdfFile, "application/pdf", "result.pdf");
         }
