@@ -118,7 +118,7 @@ namespace SurveyMVCLogin1.Controllers
                             { "Password", "2017@Admin"},
                     };
 
-                client.UploadValues("http://survey.mvc.login1/Account/Login", values);
+                client.UploadValues(new Uri("http://survey.mvc.login1/Account/Login"), "POST", values);
 
                 htmlCode = client.DownloadString(Request.Url.OriginalString);
             }

@@ -26,6 +26,10 @@ namespace SurveyMVCLogin1
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/jspdf").Include(
+                      "~/Scripts/jspdf.js",
+                      "~/Scripts/jspdfhtml.js",
+                      "~/Scripts/jspdfgen.js"));
         }
     }
 }
