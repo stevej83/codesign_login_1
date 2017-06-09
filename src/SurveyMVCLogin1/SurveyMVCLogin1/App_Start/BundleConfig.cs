@@ -30,6 +30,9 @@ namespace SurveyMVCLogin1
                       "~/Scripts/jspdf.js",
                       "~/Scripts/jspdfhtml.js",
                       "~/Scripts/jspdfgen.js"));
+            bundles.Add(new ScriptBundle("~/bundles/jsdoc").Include(
+                      "~/Scripts/jspdfsaver.js",
+                      "~/Scripts/jsdocmain.js"));
         }
     }
 }

@@ -8,7 +8,7 @@
 
 <h4>Survey</h4>
 <hr />
-<dl class="dl-horizontal" id="page1">
+    <dl>
     <dt>
         @Html.DisplayNameFor(model => model.StartTime)
     </dt>
@@ -16,8 +16,7 @@
     <dd>
         @Html.DisplayFor(model => model.StartTime)
     </dd>
-</dl>
-<dl class="dl-horizontal" id="page2">
+
     <dt>
         @Html.DisplayNameFor(model => model.S1Q1Answer)
     </dt>
@@ -25,8 +24,7 @@
     <dd>
         @Html.DisplayFor(model => model.S1Q1Answer)
     </dd>
-</dl>
-<dl class="dl-horizontal" id="page3">
+
     <dt>
         @Html.DisplayNameFor(model => model.S1Q2Answer)
     </dt>
@@ -1456,5 +1454,5 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.SurveyID }) |
     @Html.ActionLink("Back to List", "Index") |
-    <button id="cmd">Generate PDF</button>
+    <button id="cmd">Generate word</button>
 </p>
