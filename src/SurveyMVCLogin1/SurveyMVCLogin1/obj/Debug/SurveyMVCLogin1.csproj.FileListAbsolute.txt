@@ -31,6 +31,9 @@ C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\SurveyMVCLogi
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Antlr3.Runtime.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\EntityFramework.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\EntityFramework.SqlServer.dll
+C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\itextsharp.dll
+C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\itextsharp.xmlworker.dll
+C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\itextsharp.xtra.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.AI.Agent.Intercept.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.AI.DependencyCollector.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -54,6 +57,8 @@ C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.Owi
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.Web.Infrastructure.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Newtonsoft.Json.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Owin.dll
+C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\RazorPDF.dll
+C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Rotativa.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\System.Web.Helpers.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\System.Web.Mvc.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\System.Web.Optimization.dll
@@ -62,6 +67,7 @@ C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\System.Web.We
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\System.Web.WebPages.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\System.Web.WebPages.Razor.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\WebGrease.dll
+C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\itextsharp.xml
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\System.Web.Helpers.xml
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\System.Web.Mvc.xml
@@ -91,12 +97,6 @@ C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.AI.
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.AI.WindowsServer.xml
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.AI.Web.xml
-C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\obj\Debug\SurveyMVCLogin1.csprojResolveAssemblyReference.cache
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\obj\Debug\SurveyMVCLogin1.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\obj\Debug\SurveyMVCLogin1.pdb
-C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\itextsharp.dll
-C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\itextsharp.xmlworker.dll
-C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\itextsharp.xtra.dll
-C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\itextsharp.xml
-C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Rotativa.dll
-C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\RazorPDF.dll
+C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\obj\Debug\SurveyMVCLogin1.csprojResolveAssemblyReference.cache

@@ -3,1456 +3,1253 @@
 @{
     ViewBag.Title = "Details";
 }
+
+<style>
+    dt {
+        margin-top: 16px;
+    }
+
+    dd {
+        margin-top: 6px;
+        margin-left: 20px;
+    }
+</style>
+
 <div id="target">
-<h2>Details</h2>
-
-<h4>Survey</h4>
-<hr />
+    <h2>Survey Details</h2>
+    <p>
+        @Html.ActionLink("Back to List", "Index") |
+        <a id="cmd" href="#">Generate Report</a>
+    </p>
+    <hr />
+    <p>提交时间： @Html.DisplayFor(model => model.StartTime)</p>
+    <p>姓名： @Html.DisplayFor(model => model.S1Q1Answer)</p>
+    <p>电话： @Html.DisplayFor(model => model.S1Q14Answer)</p>
+    <p>邮箱： @Html.DisplayFor(model => model.S1Q15Answer)</p>
+    <p>微信： @Html.DisplayFor(model => model.S1Q16Answer)</p>
+    <hr />
+    
     <dl>
-    <dt>
-        @Html.DisplayNameFor(model => model.StartTime)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.StartTime)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q1Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q1Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q2Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q2Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q3Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q3Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q3Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q3Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q4Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q4Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q5Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q5Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q6Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q6Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q6Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q6Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q7Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q7Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q8Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q8Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q9Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q9Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q10Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q10Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q10Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q10Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q11Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q11Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q11Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q11Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q12Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q12Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q13Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q13Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q13Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q13Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q14Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q14Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q15Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q15Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S1Q16Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S1Q16Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q1Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q1Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q1Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q1Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q2Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q2Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q2Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q2Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q3Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q3Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q3Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q3Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q4Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q4Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q4Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q4Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q5Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q5Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q5Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q5Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q6Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q6Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q6Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q6Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q7Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q7Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q7Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q7Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q8Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q8Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q8Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q8Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q9Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q9Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q9Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q9Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q10Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q10Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S2Q10Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S2Q10Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q1Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q1Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q1Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q1Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q2Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q2Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q2Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q2Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q3Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q3Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q3Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q3Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q4Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q4Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q4Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q4Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q5Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q5Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q5Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q5Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q6Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q6Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q6Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q6Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q7Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q7Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q7Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q7Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q8Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q8Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q8Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q8Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q9Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q9Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q9Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q9Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q10Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q10Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S3Q10Score)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S3Q10Score)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ1Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ1Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ2Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ2Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ3Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ3Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ4Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ4Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ5Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ5Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ6Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ6Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ7Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ7Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ8Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ8Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ9Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ9Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ10Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ10Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ11Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ11Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ12Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ12Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ13Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ13Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ14Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ14Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ15Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ15Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ16Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ16Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ17Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ17Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ18Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ18Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ19Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ19Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ20Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ20Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ21Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ21Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ22Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ22Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ23Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ23Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ24Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ24Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ25Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ25Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ26Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ26Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ27Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ27Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ28Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ28Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ29Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ29Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ30Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ30Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ31Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ31Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ32Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ32Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ33Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ33Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ34Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ34Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ35Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ35Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ36Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ36Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ37Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ37Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ38Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ38Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ39Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ39Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ40Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ40Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ41Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ41Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ42Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ42Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ43Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ43Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ44Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ44Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ45Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ45Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ46Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ46Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ47Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ47Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ48Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ48Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ49Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ49Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ50Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ50Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ51Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ51Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ52Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ52Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ53Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ53Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ54Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ54Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ55Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ55Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ56Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ56Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4aQ57Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4aQ57Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ1Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ1Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ2Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ2Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ3Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ3Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ4Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ4Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ5Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ5Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ6Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ6Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ7Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ7Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ8Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ8Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ9Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ9Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ10Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ10Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ11Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ11Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ12Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ12Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ13Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ13Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ14Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ14Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ15Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ15Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ16Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ16Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ17Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ17Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ18Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ18Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ19Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ19Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ20Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ20Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ21Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ21Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ22Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ22Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ23Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ23Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ24Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ24Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ25Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ25Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ26Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ26Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ27Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ27Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ28Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ28Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ29Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ29Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ30Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ30Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ31Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ31Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ32Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ32Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ33Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ33Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ34Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ34Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ35Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ35Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ36Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ36Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ37Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ37Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ38Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ38Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ39Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ39Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ40Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ40Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ41Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ41Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ42Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ42Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ43Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ43Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ44Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ44Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ45Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ45Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ46Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ46Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ47Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ47Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ48Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ48Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ49Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ49Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ50Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ50Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ51Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ51Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ52Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ52Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ53Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ53Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ54Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ54Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ55Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ55Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ56Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ56Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ57Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ57Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ58Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ58Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ59Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ59Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ60Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ60Answer)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.S4bQ61Answer)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.S4bQ61Answer)
-    </dd>
-</dl>
+        <h3>基本信息</h3>
+        <dt>
+            生日
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q2Answer)
+        </dd>
+
+        <dt>
+            本科就读国家
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q3Answer)
+        </dd>
+
+        <dt>
+            本科院校
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q4Answer)
+        </dd>
+
+        <dt>
+            本科专业
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q5Answer)
+        </dd>
+
+        <dt>
+            硕士就读国家
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q6Answer)
+        </dd>
+
+        <dt>
+            硕士院校
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q7Answer)
+        </dd>
+
+        <dt>
+            硕士专业
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q8Answer)
+        </dd>
+
+        <dt>
+            最近工作单位
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q9Answer)
+        </dd>
+
+        <dt>
+            工作时间总长度
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q10Answer)
+        </dd>
+
+        <dt>
+            工作单位是否与英国相关
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q11Answer)
+        </dd>
+
+        <dt>
+            工作职位
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q12Answer)
+        </dd>
+
+        <dt>
+            在英国停留累计时间
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q13Answer)
+        </dd>
+    
+        <hr />
+
+        <h3>签证知识测试</h3>
+
+        <dt>
+            1. 您申请企业家移民的主要目的是？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q1Answer)
+        </dd>
+
+        <dt>
+            2. 我可以与其它人以合伙人的方式申请签证吗？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q2Answer)
+        </dd>
+
+        <dt>
+            3. 您的英文水平？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q3Answer)
+        </dd>
+
+        <dt>
+            4. 企业家移民要求的最低投资金额是多少？(以英镑位单位)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q4Answer)
+        </dd>
+
+        <dt>
+            5. 企业家移民签证的限制是？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q5Answer)
+        </dd>
+
+        <dt>
+            6. 我可以带家人来英国吗？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q6Answer)
+        </dd>
+
+        <dt>
+            7. 您知道2016年有多少来自中国的企业家移民申请被接受吗？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q7Answer)
+        </dd>
+
+        <dt>
+            8. 我可以加入一家现有的企业吗？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q8Answer)
+        </dd>
+
+        <dt>
+            9. 3年内需要雇佣多少员工才能符合续签的要求？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q9Answer)
+        </dd>
+
+        <dt>
+            10. 资金证明的主要要求是什么？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S2Q10Answer)
+        </dd>
+
+        <hr />
+
+        <h3>英国商业知识测试</h3>
+
+        <dt>
+            1. 英国的 VAT 税率是多少？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q1Answer)
+        </dd>
+
+        <dt>
+            2. 在英国开公司需要买保险吗？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q2Answer)
+        </dd>
+
+        <dt>
+            3. 对于一个28岁的员工来说，他的最低薪水是每小时多少钱？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q3Answer)
+        </dd>
+
+        <dt>
+            4. 聘请一位有3年工作经验的项目开发经理需要支付多少薪水？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q4Answer)
+        </dd>
+
+        <dt>
+            5. 在伦敦市中心 zone1 范围内可供4人用的办公室一个月的租金是多少钱？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q5Answer)
+        </dd>
+
+        <dt>
+            6. 员工年收入两万四千英镑需要缴纳的所得税占工资的比例是多少？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q6Answer)
+        </dd>
+
+        <dt>
+            7. 您是否有独立的金融咨询代表或机构的协助？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q7Answer)
+        </dd>
+
+        <dt>
+            8. 聘请使用会计服务的普遍价位是多少？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q8Answer)
+        </dd>
+
+        <dt>
+            9. 每年作为中小企业雇主自由保险费用多少？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q9Answer)
+        </dd>
+
+        <dt>
+            10. 你理解董事和股东之间的区别吗？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S3Q10Answer)
+        </dd>
+
+        <hr />
+        
+        <h3>英国创业项目测试 - 独立创业</h3>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ1Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ1Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ2Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ2Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ3Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ3Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ4Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ4Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ5Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ5Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ6Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ6Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ7Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ7Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ8Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ8Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ9Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ9Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ10Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ10Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ11Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ11Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ12Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ12Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ13Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ13Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ14Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ14Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ15Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ15Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ16Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ16Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ17Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ17Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ18Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ18Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ19Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ19Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ20Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ20Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ21Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ21Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ22Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ22Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ23Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ23Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ24Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ24Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ25Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ25Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ26Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ26Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ27Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ27Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ28Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ28Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ29Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ29Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ30Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ30Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ31Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ31Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ32Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ32Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ33Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ33Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ34Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ34Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ35Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ35Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ36Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ36Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ37Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ37Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ38Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ38Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ39Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ39Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ40Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ40Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ41Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ41Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ42Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ42Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ43Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ43Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ44Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ44Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ45Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ45Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ46Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ46Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ47Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ47Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ48Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ48Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ49Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ49Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ50Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ50Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ51Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ51Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ52Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ52Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ53Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ53Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ54Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ54Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ55Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ55Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ56Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ56Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4aQ57Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ57Answer)
+        </dd>
+
+        <hr />
+
+        <h3>英国创业项目测试 - 加入创业</h3>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ1Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ1Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ2Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ2Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ3Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ3Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ4Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ4Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ5Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ5Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ6Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ6Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ7Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ7Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ8Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ8Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ9Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ9Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ10Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ10Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ11Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ11Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ12Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ12Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ13Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ13Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ14Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ14Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ15Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ15Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ16Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ16Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ17Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ17Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ18Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ18Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ19Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ19Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ20Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ20Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ21Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ21Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ22Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ22Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ23Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ23Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ24Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ24Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ25Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ25Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ26Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ26Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ27Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ27Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ28Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ28Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ29Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ29Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ30Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ30Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ31Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ31Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ32Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ32Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ33Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ33Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ34Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ34Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ35Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ35Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ36Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ36Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ37Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ37Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ38Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ38Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ39Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ39Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ40Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ40Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ41Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ41Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ42Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ42Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ43Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ43Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ44Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ44Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ45Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ45Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ46Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ46Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ47Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ47Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ48Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ48Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ49Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ49Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ50Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ50Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ51Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ51Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ52Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ52Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ53Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ53Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ54Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ54Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ55Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ55Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ56Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ56Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ57Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ57Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ58Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ58Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ59Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ59Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ60Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ60Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S4bQ61Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ61Answer)
+        </dd>
+    </dl>
 </div>
 
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.SurveyID }) |
     @Html.ActionLink("Back to List", "Index") |
-    <button id="cmd">Generate word</button>
+    <a id="cmd" href="#">Generate Report</a>
 </p>
