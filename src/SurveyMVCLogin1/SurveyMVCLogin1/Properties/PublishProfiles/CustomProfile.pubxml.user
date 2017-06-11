@@ -391,13 +391,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/03/2017 17:17:44</publishTime>
     </File>
     <File Include="Views/Results/Details.cshtml">
-      <publishTime>06/11/2017 17:44:11</publishTime>
+      <publishTime>06/11/2017 17:50:52</publishTime>
     </File>
     <File Include="Views/Results/Edit.cshtml">
       <publishTime>06/03/2017 17:17:44</publishTime>
     </File>
     <File Include="Views/Results/Index.cshtml">
-      <publishTime>06/11/2017 17:48:18</publishTime>
+      <publishTime>06/11/2017 18:37:03</publishTime>
     </File>
     <File Include="Views/Results/Pdf.cshtml">
       <publishTime>06/07/2017 07:51:33</publishTime>

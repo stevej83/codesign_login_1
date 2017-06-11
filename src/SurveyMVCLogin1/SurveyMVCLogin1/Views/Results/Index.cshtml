@@ -20,40 +20,43 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.S1Q1Answer)
-        </td>
-        <td>
-            @if (@item.S1Q13Answer.Trim() == "time1")
-            {
-                @Html.Raw("半年以内")
-            }
-            else if (@item.S1Q13Answer.Trim() == "time2")
-            {
-                @Html.Raw("半年到一年")
-            }
-            else if (@item.S1Q13Answer.Trim() == "time3")
-            {
-                @Html.Raw("一年到三年")
-            }
-            else if (@item.S1Q13Answer.Trim() == "time4")
-            {
-                @Html.Raw("三年以上")
-            }
-            else
-            {
-                @Html.DisplayFor(modelItem => item.S1Q13Answer)
-            }
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.SurveyID })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.S1Q1Answer)
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(@item.S1Q13Answer))
+                {
+                    if (@item.S1Q13Answer.Trim() == "time1")
+                    {
+                        @Html.Raw("半年以内")
+                    }
+                    else if (@item.S1Q13Answer.Trim() == "time2")
+                    {
+                        @Html.Raw("半年到一年")
+                    }
+                    else if (@item.S1Q13Answer.Trim() == "time3")
+                    {
+                        @Html.Raw("一年到三年")
+                    }
+                    else if (@item.S1Q13Answer.Trim() == "time4")
+                    {
+                        @Html.Raw("三年以上")
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.S1Q13Answer)
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.SurveyID })
+            </td>
+        </tr>
+    }
 </table>
