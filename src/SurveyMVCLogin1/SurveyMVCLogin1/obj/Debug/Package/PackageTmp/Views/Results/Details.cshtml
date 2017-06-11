@@ -100,7 +100,24 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.S1Q10Answer)
+            
+            @if (@Model.S1Q10Answer == "exp1")
+            {
+                @Html.Raw("一年以内")
+            }
+            else if (@Model.S1Q10Answer == "exp2")
+            {
+                @Html.Raw("一到三年")
+            }
+            else if (@Model.S1Q10Answer == "exp3")
+            {
+                @Html.Raw("三年以上")
+            }
+            else
+            {
+                @Html.DisplayFor(model => model.S1Q10Answer)
+            }
+
         </dd>
 
         <dt>
@@ -124,7 +141,28 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.S1Q13Answer)
+
+            @if (@Model.S1Q10Answer == "time1")
+            {
+                @Html.Raw("半年以内")
+            }
+            else if (@Model.S1Q10Answer == "time2")
+            {
+                @Html.Raw("半年到一年")
+            }
+            else if (@Model.S1Q10Answer == "time3")
+            {
+                @Html.Raw("一年到三年")
+            }
+            else if (@Model.S1Q10Answer == "time4")
+            {
+                @Html.Raw("三年以上")
+            }
+            else
+            {
+                @Html.DisplayFor(model => model.S1Q13Answer)
+            }
+
         </dd>
     
         <hr />
