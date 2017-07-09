@@ -15,12 +15,17 @@
     }
 </style>
 
-<div id="target">
-    <h2>Survey Details</h2>
+<br />
+<div>
     <p>
         @Html.ActionLink("Back to List", "Index") |
-        <a id="cmd" href="#">Generate Report</a>
+        <a id="cmd" href="#">Generate Survey Record</a> |
+        <a id="cmd2" href="#">Generate User Report</a>
     </p>
+</div>
+
+<div id="target">
+    <h2>Survey Record</h2>
     <hr />
     <p>提交时间： @Html.DisplayFor(model => model.StartTime)</p>
     <p>姓名： @Html.DisplayFor(model => model.S1Q1Answer)</p>
@@ -1285,4 +1290,15 @@
             @Html.DisplayFor(model => model.S4bQ61Answer)
         </dd>
     </dl>
+</div>
+
+<div id="target2" style="display:none">
+    <hr />
+    <p>测试 1 - 3 得分：</p>
+    <p>您的基本信息测试得分是 @ViewBag.Section1Score 分 (满分70分)</p>
+    <p>您的签证知识测试得分是 @ViewBag.Section2Score 分 (满分100分)</p>
+    <p>您的英国商业知识测试得分是 @ViewBag.Section3Score 分 (满分100分)</p>
+    <hr />
+    <p>测试总结：</p>
+    <p>@ViewBag.Section3Message</p>
 </div>

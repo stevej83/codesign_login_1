@@ -99,4 +99,3 @@ C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.AI.
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\bin\Microsoft.AI.Web.xml
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\obj\Debug\SurveyMVCLogin1.dll
 C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\obj\Debug\SurveyMVCLogin1.pdb
-C:\github\codesign_login_1\src\SurveyMVCLogin1\SurveyMVCLogin1\obj\Debug\SurveyMVCLogin1.csprojResolveAssemblyReference.cache

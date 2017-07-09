@@ -86,3 +86,7 @@
 $("#cmd").click(function (event) {
     $("#target").wordExport();
 });
+
+$("#cmd2").click(function (event) {
+    $("#target2").wordExport();
+});
