@@ -15,22 +15,40 @@
             姓名
         </th>
         <th>
-            在英时间
+            S1得分
+        </th>
+        <th>
+            S2得分
+        </th>
+        <th>
+            S3得分
         </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
+
+    @foreach (var item in Model.OrderByDescending(item => item.StartTime))
     {
+        string dateStr = "";
+        string displayDateStr = "";
+        dateStr = item.StartTime;
+        displayDateStr = dateStr.Substring(0, 4) + "-" + dateStr.Substring(4, 2) + "-" + dateStr.Substring(6, 2) + " " + dateStr.Substring(8, 2) + ":" + dateStr.Substring(10, 2);
+
+        if (!item.S1Q1Answer.Contains("2") && item.S1Q1Answer != "")
+        {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.StartTime)
+                @*Html.DisplayFor(modelItem => item.StartTime)*@
+                @Html.Raw(displayDateStr)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.S1Q1Answer)
             </td>
             <td>
-                @if (!string.IsNullOrEmpty(@item.S1Q13Answer))
+                @{int ScoreSection1 = @item.S1Q3Score + @item.S1Q6Score + @item.S1Q9Score + @item.S1Q13Score + @item.S1Q14Score + @item.S1Q16Score;}
+                @Html.Raw(ScoreSection1.ToString())
+
+                @*if (!string.IsNullOrEmpty(@item.S1Q13Answer))
                 {
                     if (@item.S1Q13Answer.Trim() == "time1")
                     {
@@ -52,11 +70,21 @@
                     {
                         @Html.DisplayFor(modelItem => item.S1Q13Answer)
                     }
-                }
+                }*@
+
+            </td>
+            <td>
+                @{int ScoreSection2 = @item.S2Q1Score + @item.S2Q2Score + @item.S2Q3Score + @item.S2Q4Score + @item.S2Q5Score + @item.S2Q6Score + @item.S2Q7Score + @item.S2Q8Score + @item.S2Q9Score + @item.S2Q10Score;}
+                @Html.Raw(ScoreSection2.ToString())
+            </td>
+            <td>
+                @{int ScoreSection3 = @item.S3Q1Score + @item.S3Q2Score + @item.S3Q3Score + @item.S3Q4Score + @item.S3Q5Score + @item.S3Q6Score + @item.S3Q7Score + @item.S3Q8Score + @item.S3Q9Score + @item.S3Q10Score;}
+                @Html.Raw(ScoreSection3.ToString())
             </td>
             <td>
                 @Html.ActionLink("Details", "Details", new { id = item.SurveyID })
             </td>
         </tr>
-    }
+                        }
+                    }
 </table>

@@ -94,7 +94,7 @@ namespace SurveyMVCLogin1.Controllers
 
         //
         // GET: /Account/VerifyCode
-        [AllowAnonymous]
+        /*[AllowAnonymous]
         public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)
         {
             // Require that the user has already logged in via username/password or external login
@@ -103,11 +103,11 @@ namespace SurveyMVCLogin1.Controllers
                 return View("Error");
             }
             return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
-        }
+        }*/
 
         //
         // POST: /Account/VerifyCode
-        [HttpPost]
+        /*[HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> VerifyCode(VerifyCodeViewModel model)
@@ -133,7 +133,7 @@ namespace SurveyMVCLogin1.Controllers
                     ModelState.AddModelError("", "Invalid code.");
                     return View(model);
             }
-        }
+        }*/
 
         //
         // GET: /Account/Register
@@ -175,7 +175,7 @@ namespace SurveyMVCLogin1.Controllers
 
         //
         // GET: /Account/ConfirmEmail
-        [AllowAnonymous]
+        /*[AllowAnonymous]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
         {
             if (userId == null || code == null)
@@ -184,19 +184,19 @@ namespace SurveyMVCLogin1.Controllers
             }
             var result = await UserManager.ConfirmEmailAsync(userId, code);
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
-        }
+        }*/
 
         //
         // GET: /Account/ForgotPassword
-        [AllowAnonymous]
+        /*[AllowAnonymous]
         public ActionResult ForgotPassword()
         {
             return View();
-        }
+        }*/
 
         //
         // POST: /Account/ForgotPassword
-        [HttpPost]
+        /*[HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ForgotPassword(ForgotPasswordViewModel model)
@@ -222,27 +222,27 @@ namespace SurveyMVCLogin1.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
-        }
+        }*/
 
         //
         // GET: /Account/ForgotPasswordConfirmation
-        [AllowAnonymous]
+        /*[AllowAnonymous]
         public ActionResult ForgotPasswordConfirmation()
         {
             return View();
-        }
+        }*/
 
         //
         // GET: /Account/ResetPassword
-        [AllowAnonymous]
+        /*[AllowAnonymous]
         public ActionResult ResetPassword(string code)
         {
             return code == null ? View("Error") : View();
-        }
+        }*/
 
         //
         // POST: /Account/ResetPassword
-        [HttpPost]
+        /*[HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ResetPassword(ResetPasswordViewModel model)
@@ -264,30 +264,30 @@ namespace SurveyMVCLogin1.Controllers
             }
             AddErrors(result);
             return View();
-        }
+        }*/
 
         //
         // GET: /Account/ResetPasswordConfirmation
-        [AllowAnonymous]
+        /*[AllowAnonymous]
         public ActionResult ResetPasswordConfirmation()
         {
             return View();
-        }
+        }*/
 
         //
         // POST: /Account/ExternalLogin
-        [HttpPost]
+        /*[HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult ExternalLogin(string provider, string returnUrl)
         {
             // Request a redirect to the external login provider
             return new ChallengeResult(provider, Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl }));
-        }
+        }*/
 
         //
         // GET: /Account/SendCode
-        [AllowAnonymous]
+        /*[AllowAnonymous]
         public async Task<ActionResult> SendCode(string returnUrl, bool rememberMe)
         {
             var userId = await SignInManager.GetVerifiedUserIdAsync();
@@ -298,11 +298,11 @@ namespace SurveyMVCLogin1.Controllers
             var userFactors = await UserManager.GetValidTwoFactorProvidersAsync(userId);
             var factorOptions = userFactors.Select(purpose => new SelectListItem { Text = purpose, Value = purpose }).ToList();
             return View(new SendCodeViewModel { Providers = factorOptions, ReturnUrl = returnUrl, RememberMe = rememberMe });
-        }
+        }*/
 
         //
         // POST: /Account/SendCode
-        [HttpPost]
+        /*[HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> SendCode(SendCodeViewModel model)
@@ -318,11 +318,11 @@ namespace SurveyMVCLogin1.Controllers
                 return View("Error");
             }
             return RedirectToAction("VerifyCode", new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
-        }
+        }*/
 
         //
         // GET: /Account/ExternalLoginCallback
-        [AllowAnonymous]
+        /*[AllowAnonymous]
         public async Task<ActionResult> ExternalLoginCallback(string returnUrl)
         {
             var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync();
@@ -348,11 +348,11 @@ namespace SurveyMVCLogin1.Controllers
                     ViewBag.LoginProvider = loginInfo.Login.LoginProvider;
                     return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
             }
-        }
+        }*/
 
         //
         // POST: /Account/ExternalLoginConfirmation
-        [HttpPost]
+        /*[HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model, string returnUrl)
@@ -386,7 +386,7 @@ namespace SurveyMVCLogin1.Controllers
 
             ViewBag.ReturnUrl = returnUrl;
             return View(model);
-        }
+        }*/
 
         //
         // POST: /Account/LogOff
@@ -400,7 +400,7 @@ namespace SurveyMVCLogin1.Controllers
 
         //
         // GET: /Account/ExternalLoginFailure
-        [AllowAnonymous]
+        /*[AllowAnonymous]
         public ActionResult ExternalLoginFailure()
         {
             return View();
@@ -424,7 +424,7 @@ namespace SurveyMVCLogin1.Controllers
             }
 
             base.Dispose(disposing);
-        }
+        }*/
 
         #region Helpers
         // Used for XSRF protection when adding external logins

@@ -2,6 +2,12 @@
 
 @{
     ViewBag.Title = "Details";
+
+    string dateStr = "";
+    string displayDateStr = "";
+
+    dateStr = Model.StartTime;
+    displayDateStr = dateStr.Substring(0, 4) + "-" + dateStr.Substring(4, 2) + "-" + dateStr.Substring(6, 2) + " " + dateStr.Substring(8, 2) + ":" + dateStr.Substring(10, 2);
 }
 
 <style>
@@ -27,17 +33,17 @@
 <div id="target">
     <h2>Survey Record</h2>
     <hr />
-    <p>提交时间： @Html.DisplayFor(model => model.StartTime)</p>
+    <p>提交时间： @*Html.DisplayFor(model => model.StartTime)*@ @Html.Raw(displayDateStr) </p>
     <p>姓名： @Html.DisplayFor(model => model.S1Q1Answer)</p>
-    <p>电话： @Html.DisplayFor(model => model.S1Q14Answer)</p>
-    <p>邮箱： @Html.DisplayFor(model => model.S1Q15Answer)</p>
-    <p>微信： @Html.DisplayFor(model => model.S1Q16Answer)</p>
+    <p>电话： @Html.DisplayFor(model => model.S1Q17Answer)</p>
+    <p>邮箱： @Html.DisplayFor(model => model.S1Q18Answer)</p>
+    <p>微信： @Html.DisplayFor(model => model.S1Q19Answer)</p>
     <hr />
     
     <dl>
         <h3>基本信息</h3>
         <dt>
-            生日
+            出生年份
         </dt>
 
         <dd>
@@ -45,7 +51,7 @@
         </dd>
 
         <dt>
-            本科就读国家
+            取得本科学位的国家
         </dt>
 
         <dd>
@@ -69,7 +75,7 @@
         </dd>
 
         <dt>
-            硕士就读国家
+            取得硕士学位的国家
         </dt>
 
         <dd>
@@ -77,7 +83,7 @@
         </dd>
 
         <dt>
-            硕士院校
+            硕士院校名称
         </dt>
 
         <dd>
@@ -93,7 +99,7 @@
         </dd>
 
         <dt>
-            最近工作单位
+            取得博士学位的国家
         </dt>
 
         <dd>
@@ -101,32 +107,15 @@
         </dd>
 
         <dt>
-            工作时间总长度
+            博士院校名称
         </dt>
 
         <dd>
-            
-            @if (@Model.S1Q10Answer == "exp1")
-            {
-                @Html.Raw("一年以内")
-            }
-            else if (@Model.S1Q10Answer == "exp2")
-            {
-                @Html.Raw("一到三年")
-            }
-            else if (@Model.S1Q10Answer == "exp3")
-            {
-                @Html.Raw("三年以上")
-            }
-            else
-            {
-                @Html.DisplayFor(model => model.S1Q10Answer)
-            }
-
+            @Html.DisplayFor(model => model.S1Q10Answer)
         </dd>
 
         <dt>
-            工作单位是否与英国相关
+            博士专业
         </dt>
 
         <dd>
@@ -134,11 +123,52 @@
         </dd>
 
         <dt>
-            工作职位
+            现/最近工作单位
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.S1Q12Answer)
+        </dd>
+
+        <dt>
+            工作经验
+        </dt>
+
+        <dd>
+            
+            @if (@Model.S1Q13Answer == "exp1")
+            {
+                @Html.Raw("一年以内")
+            }
+            else if (@Model.S1Q13Answer == "exp2")
+            {
+                @Html.Raw("一到三年")
+            }
+            else if (@Model.S1Q13Answer == "exp3")
+            {
+                @Html.Raw("三年以上")
+            }
+            else
+            {
+                @Html.DisplayFor(model => model.S1Q13Answer)
+            }
+
+        </dd>
+
+        <dt>
+            工作是否与英国相关
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q14Answer)
+        </dd>
+
+        <dt>
+            工作职位
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S1Q15Answer)
         </dd>
 
         <dt>
@@ -147,25 +177,25 @@
 
         <dd>
 
-            @if (@Model.S1Q10Answer == "time1")
+            @if (@Model.S1Q16Answer == "time1")
             {
                 @Html.Raw("半年以内")
             }
-            else if (@Model.S1Q10Answer == "time2")
+            else if (@Model.S1Q16Answer == "time2")
             {
                 @Html.Raw("半年到一年")
             }
-            else if (@Model.S1Q10Answer == "time3")
+            else if (@Model.S1Q16Answer == "time3")
             {
                 @Html.Raw("一年到三年")
             }
-            else if (@Model.S1Q10Answer == "time4")
+            else if (@Model.S1Q16Answer == "time4")
             {
                 @Html.Raw("三年以上")
             }
             else
             {
-                @Html.DisplayFor(model => model.S1Q13Answer)
+                @Html.DisplayFor(model => model.S1Q16Answer)
             }
 
         </dd>
@@ -191,7 +221,7 @@
         </dd>
 
         <dt>
-            3. 您的英文水平？
+            3. 对您的英文要求？
         </dt>
 
         <dd>
@@ -207,7 +237,7 @@
         </dd>
 
         <dt>
-            5. 企业家移民签证的限制是？
+            5. 企业家移民签证的主申请人是否可以为他人工作？
         </dt>
 
         <dd>
@@ -223,7 +253,7 @@
         </dd>
 
         <dt>
-            7. 您知道2016年有多少来自中国的企业家移民申请被接受吗？
+            7. 您知道2017年有多少来自中国的企业家移民申请被接受吗？
         </dt>
 
         <dd>
@@ -275,7 +305,7 @@
         </dd>
 
         <dt>
-            3. 对于一个28岁的员工来说，他的最低薪水是每小时多少钱？
+            3. 有关员工每小时最低工资，下面哪个数据是合法的最低数据？
         </dt>
 
         <dd>
@@ -283,7 +313,7 @@
         </dd>
 
         <dt>
-            4. 聘请一位有3年工作经验的项目开发经理需要支付多少薪水？
+            4. 聘请一位有3年工作经验的项目开发经理需要支付的薪水是多少？
         </dt>
 
         <dd>
@@ -291,7 +321,7 @@
         </dd>
 
         <dt>
-            5. 在伦敦市中心 zone1 范围内可供4人用的办公室一个月的租金是多少钱？
+            5. 在伦敦市中心 zone2 范围内可供4人用的办公室一个月的租金是多少钱？
         </dt>
 
         <dd>
@@ -299,7 +329,7 @@
         </dd>
 
         <dt>
-            6. 员工年收入两万四千英镑需要缴纳的所得税占工资的比例是多少？
+            6. 员工年收入两万四千英镑应纳税工资部分缴纳比例是多少？
         </dt>
 
         <dd>
@@ -307,7 +337,7 @@
         </dd>
 
         <dt>
-            7. 您是否有独立的金融咨询代表或机构的协助？
+            7. 您是否咨询过移民律师或类似的企业家签证持有人？
         </dt>
 
         <dd>
@@ -331,7 +361,7 @@
         </dd>
 
         <dt>
-            10. 你理解董事和股东之间的区别吗？
+            10. 你理解在英国董事和股东之间的区别吗？
         </dt>
 
         <dd>
@@ -343,7 +373,8 @@
         <h3>英国创业项目测试 - 独立创业</h3>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ1Answer)
+            @*Html.DisplayNameFor(model => model.S4aQ22Answer)*@
+            1. 提交什么签证？
         </dt>
 
         <dd>
@@ -351,7 +382,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ2Answer)
+            2. 为什么提交这个签证？
         </dt>
 
         <dd>
@@ -359,7 +390,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ3Answer)
+            3. 为什么在英国创业？是否考虑过其他国家市场？
         </dt>
 
         <dd>
@@ -367,7 +398,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ4Answer)
+            4. 是否在英国已经注册了公司？
         </dt>
 
         <dd>
@@ -375,7 +406,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ5Answer)
+            5. 经营场所的邮政编码是什么？
         </dt>
 
         <dd>
@@ -383,7 +414,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ6Answer)
+            6. 经营场所租金一年多少钱？
         </dt>
 
         <dd>
@@ -391,7 +422,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ7Answer)
+            7. 商业模式是什么？(最多三句话，限制字数50字以内)
         </dt>
 
         <dd>
@@ -399,7 +430,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ8Answer)
+            8. 商业短期，中期，长期的发展规划，目标是什么？
         </dt>
 
         <dd>
@@ -407,7 +438,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ9Answer)
+            9. 有没有做过市场调查？调查方式是什么？
         </dt>
 
         <dd>
@@ -415,7 +446,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ10Answer)
+            10. 市场调查的结果是什么？
         </dt>
 
         <dd>
@@ -423,7 +454,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ11Answer)
+            11. 是否打算雇佣员工？
         </dt>
 
         <dd>
@@ -431,7 +462,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ12Answer)
+            12. 什么时候雇佣员工？
         </dt>
 
         <dd>
@@ -439,7 +470,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ13Answer)
+            13. 雇佣的员工职位是什么？
         </dt>
 
         <dd>
@@ -447,7 +478,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ14Answer)
+            14. 聘请的标准是什么？
         </dt>
 
         <dd>
@@ -455,7 +486,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ15Answer)
+            15. 招聘方法是什么？从哪里招聘？
         </dt>
 
         <dd>
@@ -463,7 +494,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ16Answer)
+            16. 招聘成本是多少钱？
         </dt>
 
         <dd>
@@ -471,7 +502,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ17Answer)
+            17. 雇佣员工的工资是多少？
         </dt>
 
         <dd>
@@ -479,7 +510,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ18Answer)
+            18. 有无潜在客户？
         </dt>
 
         <dd>
@@ -487,7 +518,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ19Answer)
+            19. 有无已开始或进行中的项目？
         </dt>
 
         <dd>
@@ -495,7 +526,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ20Answer)
+            20. 第一年盈利预计是多少？
         </dt>
 
         <dd>
@@ -503,15 +534,15 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ21Answer)
+            21. 第一年预计成本是多少？
         </dt>
-
+            
         <dd>
             @Html.DisplayFor(model => model.S4aQ21Answer)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ22Answer)
+            22. 第一年营销成本是多少？
         </dt>
 
         <dd>
@@ -519,7 +550,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ23Answer)
+            23. 第一年客户数是多少？
         </dt>
 
         <dd>
@@ -527,7 +558,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ24Answer)
+            24. 第二年盈利预计是多少？
         </dt>
 
         <dd>
@@ -535,7 +566,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ25Answer)
+            25. 第二年预计成本是多少？
         </dt>
 
         <dd>
@@ -543,7 +574,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ26Answer)
+            26. 第二年营销成本是多少？
         </dt>
 
         <dd>
@@ -551,7 +582,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ27Answer)
+            27. 第二年客户数是多少？
         </dt>
 
         <dd>
@@ -559,7 +590,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ28Answer)
+            28. 第三年盈利预计是多少？
         </dt>
 
         <dd>
@@ -567,7 +598,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ29Answer)
+            29. 第三年预计成本是多少？
         </dt>
 
         <dd>
@@ -575,7 +606,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ30Answer)
+            30. 第三年营销成本是多少？
         </dt>
 
         <dd>
@@ -583,7 +614,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ31Answer)
+            31. 第三年客户数是多少？
         </dt>
 
         <dd>
@@ -591,7 +622,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ32Answer)
+            32. 如果是贸易类，平均毛利率是多少？
         </dt>
 
         <dd>
@@ -599,7 +630,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ33Answer)
+            33. 税前利润是多少？税后利润是多少？ （3年数据）
         </dt>
 
         <dd>
@@ -607,7 +638,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ34Answer)
+            34. 竞争对手有多少？
         </dt>
 
         <dd>
@@ -615,7 +646,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ35Answer)
+            35. 竞争对手的核心优势是什么？
         </dt>
 
         <dd>
@@ -623,7 +654,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ36Answer)
+            36. 你的商业核心竞争优势是什么？
         </dt>
 
         <dd>
@@ -631,7 +662,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ37Answer)
+            37. 你有没有合伙人？
         </dt>
 
         <dd>
@@ -639,7 +670,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ38Answer)
+            38. 合伙人背景是什么？有没有商业经验？
         </dt>
 
         <dd>
@@ -647,7 +678,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ39Answer)
+            39. 打算投资多少钱？
         </dt>
 
         <dd>
@@ -655,7 +686,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ40Answer)
+            40. 投资计划花在那些方面？
         </dt>
 
         <dd>
@@ -663,7 +694,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ41Answer)
+            41. 什么时候公司总体盈利？
         </dt>
 
         <dd>
@@ -671,7 +702,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ42Answer)
+            42. 您是否给公司购买了商业保险？
         </dt>
 
         <dd>
@@ -679,7 +710,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ43Answer)
+            43. 你购买了什么类型的商业保险？
         </dt>
 
         <dd>
@@ -687,7 +718,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ44Answer)
+            44. 商业保险一年多少钱？
         </dt>
 
         <dd>
@@ -695,7 +726,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ45Answer)
+            45. 公司是否注册了VAT？
         </dt>
 
         <dd>
@@ -703,7 +734,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ46Answer)
+            46. VAT 的FULL NAME是什么？
         </dt>
 
         <dd>
@@ -711,7 +742,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ47Answer)
+            47. VAT税率是多少？
         </dt>
 
         <dd>
@@ -719,7 +750,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ48Answer)
+            48. 营业税的税率是多少？
         </dt>
 
         <dd>
@@ -727,7 +758,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ49Answer)
+            49. 会计公司的名字，联系人的名字？
         </dt>
 
         <dd>
@@ -735,7 +766,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ50Answer)
+            50. 会计服务一年多少钱？
         </dt>
 
         <dd>
@@ -743,7 +774,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ51Answer)
+            51. 您的最高学历是什么？
         </dt>
 
         <dd>
@@ -751,7 +782,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ52Answer)
+            52. 所学专业是否和创业思路相关联或者有帮助？简单阐述，如果有
         </dt>
 
         <dd>
@@ -759,7 +790,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ53Answer)
+            53. 上一次进入英国是什么时候？
         </dt>
 
         <dd>
@@ -767,7 +798,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ54Answer)
+            54. 是否在在英国有过工作经验？
         </dt>
 
         <dd>
@@ -775,7 +806,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ55Answer)
+            55. 最近三年是否常驻英国或来过英国多少次？
         </dt>
 
         <dd>
@@ -783,7 +814,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ56Answer)
+            56. 资金来源是什么？
         </dt>
 
         <dd>
@@ -791,11 +822,59 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4aQ57Answer)
+            57. 如果是赠与，赠与人的工作单位是什么？年薪多少？
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.S4aQ57Answer)
+        </dd>
+
+        <dt>
+            58. 如果商业失败怎么办？ 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ58Answer)
+        </dd>
+
+        <dt>
+            59. 你打算居住在哪里？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ59Answer)
+        </dd>
+
+        <dt>
+            60. 一年的生活成本是多少？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ60Answer)
+        </dd>
+
+        <dt>
+            61. 有没有家属同行？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ61Answer)
+        </dd>
+
+        <dt>
+            62. 配偶是否打算来英国工作？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ62Answer)
+        </dd>
+
+        <dt>
+            63. 未满18岁子女是否来英国上学？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4aQ63Answer)
         </dd>
 
         <hr />
@@ -803,7 +882,7 @@
         <h3>英国创业项目测试 - 加入创业</h3>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ1Answer)
+            1. 本测试涉及的英国签证类型是什么？
         </dt>
 
         <dd>
@@ -811,7 +890,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ2Answer)
+            2. 提交的什么签证？
         </dt>
 
         <dd>
@@ -819,7 +898,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ3Answer)
+            3. 为什么提交这个签证？
         </dt>
 
         <dd>
@@ -827,7 +906,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ4Answer)
+            4. 为什么在英国创业？是否考虑过其他国家市场？
         </dt>
 
         <dd>
@@ -835,7 +914,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ5Answer)
+            5. 现有企业的商业模式是什么？（最多三句话，限制字数50字以内）
         </dt>
 
         <dd>
@@ -843,7 +922,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ6Answer)
+            6. 商业短期，中期，长期的发展规划，目标是什么？
         </dt>
 
         <dd>
@@ -851,7 +930,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ7Answer)
+            7. 有没有做过市场调查？调查方式是什么？
         </dt>
 
         <dd>
@@ -859,7 +938,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ8Answer)
+            8. 市场调查的结果是什么？
         </dt>
 
         <dd>
@@ -867,7 +946,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ9Answer)
+            9. 为什么要加入一个企业创业？
         </dt>
 
         <dd>
@@ -875,7 +954,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ10Answer)
+            10. 加入的企业叫什么名字？
         </dt>
 
         <dd>
@@ -883,7 +962,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ11Answer)
+            11. 如何找到的加入企业？
         </dt>
 
         <dd>
@@ -891,7 +970,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ12Answer)
+            12. 加入企业现有股东几个？董事几个？持股比例分别是多少？
         </dt>
 
         <dd>
@@ -899,7 +978,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ13Answer)
+            13. 经营场所的邮政编码是什么？
         </dt>
 
         <dd>
@@ -907,7 +986,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ14Answer)
+            14. 经营场所租金一年多少钱？
         </dt>
 
         <dd>
@@ -915,7 +994,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ15Answer)
+            15. 招聘方法是什么？从哪里招聘？
         </dt>
 
         <dd>
@@ -923,7 +1002,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ16Answer)
+            16. 招聘成本是多少钱？
         </dt>
 
         <dd>
@@ -931,7 +1010,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ17Answer)
+            17. 加入的企业负责人的基本背景是什么？
         </dt>
 
         <dd>
@@ -939,7 +1018,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ18Answer)
+            18. 是否见过负责人，上一次见是什么时候？交谈内容主要是什么？
         </dt>
 
         <dd>
@@ -947,7 +1026,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ19Answer)
+            19. 企业目前现有员工多少人？
         </dt>
 
         <dd>
@@ -955,7 +1034,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ20Answer)
+            20. 企业成立年份？
         </dt>
 
         <dd>
@@ -963,7 +1042,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ21Answer)
+            21. 企业过去两年的营业额及利润率是多少？
         </dt>
 
         <dd>
@@ -971,7 +1050,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ22Answer)
+            22. 如果亏损，为什么要投资一个现在亏损的企业？
         </dt>
 
         <dd>
@@ -979,7 +1058,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ23Answer)
+            23. 如果盈利，企业为什么吸收你的20万英镑投资？
         </dt>
 
         <dd>
@@ -987,7 +1066,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ24Answer)
+            24. 投资20万英镑，你占有的股份比例是多少？
         </dt>
 
         <dd>
@@ -995,7 +1074,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ25Answer)
+            25. 如果是董事借款，借款的条款是什么？
         </dt>
 
         <dd>
@@ -1003,7 +1082,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ26Answer)
+            26. 如果是股份比例，为什么占有这个比例？
         </dt>
 
         <dd>
@@ -1011,7 +1090,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ27Answer)
+            27. 企业的估值方法是什么？
         </dt>
 
         <dd>
@@ -1019,7 +1098,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ28Answer)
+            28. 你加入企业后，主要负责什么，主要职位是什么？
         </dt>
 
         <dd>
@@ -1027,7 +1106,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ29Answer)
+            29. 加入企业后，你是否有工资？如果有，多少钱？
         </dt>
 
         <dd>
@@ -1035,7 +1114,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ30Answer)
+            30. 是否打算新增雇佣员工？
         </dt>
 
         <dd>
@@ -1043,7 +1122,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ31Answer)
+            31. 什么时候计划雇佣新员工？
         </dt>
 
         <dd>
@@ -1051,7 +1130,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ32Answer)
+            32. 雇佣的员工职位是什么？
         </dt>
 
         <dd>
@@ -1059,7 +1138,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ33Answer)
+            33. 招聘的标准是什么？
         </dt>
 
         <dd>
@@ -1067,7 +1146,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ34Answer)
+            34. 招聘方法是什么？从哪里招聘？
         </dt>
 
         <dd>
@@ -1075,7 +1154,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ35Answer)
+            35. 招聘成本是多少钱？
         </dt>
 
         <dd>
@@ -1083,7 +1162,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ36Answer)
+            36. 雇佣员工的工资是多少？
         </dt>
 
         <dd>
@@ -1091,7 +1170,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ37Answer)
+            37. 如果是贸易类，平均毛利率是多少？
         </dt>
 
         <dd>
@@ -1099,7 +1178,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ38Answer)
+            38. 税前利润是多少？税后利润是多少？ （3年数据）
         </dt>
 
         <dd>
@@ -1107,7 +1186,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ39Answer)
+            39. 竞争对手有多少？
         </dt>
 
         <dd>
@@ -1115,7 +1194,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ40Answer)
+            40. 竞争对手的核心优势是什么？
         </dt>
 
         <dd>
@@ -1123,7 +1202,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ41Answer)
+            41. 你的商业核心竞争优势是什么？
         </dt>
 
         <dd>
@@ -1131,7 +1210,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ42Answer)
+            42. 企业是否购买了保险？
         </dt>
 
         <dd>
@@ -1139,7 +1218,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ43Answer)
+            43. 企业购买了什么类型的保险？
         </dt>
 
         <dd>
@@ -1147,7 +1226,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ44Answer)
+            44. 保险一年多少钱？
         </dt>
 
         <dd>
@@ -1155,7 +1234,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ45Answer)
+            45. 公司是否注册了 VAT？
         </dt>
 
         <dd>
@@ -1163,7 +1242,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ46Answer)
+            46. VAT 的 FULL NAME 是什么？
         </dt>
 
         <dd>
@@ -1171,7 +1250,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ47Answer)
+            47. VAT 税率是多少？
         </dt>
 
         <dd>
@@ -1179,7 +1258,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ48Answer)
+            48. 营业税的税率是多少？
         </dt>
 
         <dd>
@@ -1187,7 +1266,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ49Answer)
+            49. 会计公司的名字，联系人的名字？
         </dt>
 
         <dd>
@@ -1195,7 +1274,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ50Answer)
+            50. 会计服务一年多少钱？
         </dt>
 
         <dd>
@@ -1203,7 +1282,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ51Answer)
+            51. 您的最高学历是什么？
         </dt>
 
         <dd>
@@ -1211,7 +1290,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ52Answer)
+            52. 所学专业是否和创业思路相关联或者有帮助？ 简单阐述，如果有
         </dt>
 
         <dd>
@@ -1219,7 +1298,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ53Answer)
+            53. 上一次进入英国是什么时候？
         </dt>
 
         <dd>
@@ -1227,7 +1306,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ54Answer)
+            54. 是否在英国有过工作经验？
         </dt>
 
         <dd>
@@ -1235,7 +1314,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ55Answer)
+            55. 是否此工作经验与申请加入企业相关？
         </dt>
 
         <dd>
@@ -1243,7 +1322,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ56Answer)
+            56. 资金来源是什么？
         </dt>
 
         <dd>
@@ -1251,7 +1330,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ57Answer)
+            57. 如果是父母赠与，父母的工作单位是什么，年薪多少？
         </dt>
 
         <dd>
@@ -1259,7 +1338,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ58Answer)
+            58. 如果商业失败怎么办？
         </dt>
 
         <dd>
@@ -1267,7 +1346,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ59Answer)
+            59. 你打算居住在哪里？
         </dt>
 
         <dd>
@@ -1275,7 +1354,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ60Answer)
+            60. 一年的生活成本是多少？
         </dt>
 
         <dd>
@@ -1283,11 +1362,27 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.S4bQ61Answer)
+            61. 有没有家属同行？
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.S4bQ61Answer)
+        </dd>
+
+        <dt>
+            62. 配偶是否打算来英国工作？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ62Answer)
+        </dd>
+
+        <dt>
+            63. 未满18岁子女是否来英国上学？
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S4bQ63Answer)
         </dd>
     </dl>
 </div>
@@ -1295,7 +1390,7 @@
 <div id="target2" style="display:none">
     <hr />
     <p>测试 1 - 3 得分：</p>
-    <p>您的基本信息测试得分是 @ViewBag.Section1Score 分 (满分70分)</p>
+    <p>您的基本信息测试得分是 @ViewBag.Section1Score 分 (满分80分)</p>
     <p>您的签证知识测试得分是 @ViewBag.Section2Score 分 (满分100分)</p>
     <p>您的英国商业知识测试得分是 @ViewBag.Section3Score 分 (满分100分)</p>
     <hr />

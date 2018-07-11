@@ -19,7 +19,7 @@ namespace SurveyMVCLogin1.Models
         [Display(Name = "1. 姓名:")]
         public string S1Q1Answer { get; set; }
 
-        [Display(Name = "2. 生日:")]
+        [Display(Name = "2. 出生年份:")]
         public string S1Q2Answer { get; set; }
 
         [Display(Name = "3. 本科就读国:")]
@@ -46,38 +46,50 @@ namespace SurveyMVCLogin1.Models
         [Display(Name = "8. 硕士专业:")]
         public string S1Q8Answer { get; set; }
 
-        [Display(Name = "9. 现/最近工作单位:")]
+        [Display(Name = "9. 博士所在国:")]
         public string S1Q9Answer { get; set; }
 
-        [Display(Name = "10. 工作时间总长度:")]
+        // 得分：S1Q6 0/10
+        public int S1Q9Score { get; set; }
+
+        [Display(Name = "10. 博士院校名称:")]
         public string S1Q10Answer { get; set; }
 
-        // 得分：S1Q10 0/5/10
-        public int S1Q10Score { get; set; }
-
-        [Display(Name = "11. 工作单位是否与英国相关:")]
+        [Display(Name = "11. 博士专业:")]
         public string S1Q11Answer { get; set; }
 
-        // 得分：S1Q11 0/10
-        public int S1Q11Score { get; set; }
-
-        [Display(Name = "12. 工作职位:")]
+        [Display(Name = "12. 现/最近工作单位:")]
         public string S1Q12Answer { get; set; }
 
-        [Display(Name = "13. 在英国停留累计时间:")]
+        [Display(Name = "13. 工作时间总长度:")]
         public string S1Q13Answer { get; set; }
 
-        // 得分：S1Q13 0/10/20/30
+        // 得分：S1Q10 0/5/10
         public int S1Q13Score { get; set; }
 
-        [Display(Name = "14. 电话:")]
+        [Display(Name = "14. 工作单位是否与英国相关:")]
         public string S1Q14Answer { get; set; }
 
-        [Display(Name = "15. 邮箱:")]
+        // 得分：S1Q11 0/10
+        public int S1Q14Score { get; set; }
+
+        [Display(Name = "15. 工作职位:")]
         public string S1Q15Answer { get; set; }
 
-        [Display(Name = "16. 微信:")]
+        [Display(Name = "16. 在英国停留累计时间:")]
         public string S1Q16Answer { get; set; }
+
+        // 得分：S1Q13 0/10/20/30
+        public int S1Q16Score { get; set; }
+
+        [Display(Name = "17. 电话:")]
+        public string S1Q17Answer { get; set; }
+
+        [Display(Name = "18. 邮箱:")]
+        public string S1Q18Answer { get; set; }
+
+        [Display(Name = "19. 微信:")]
+        public string S1Q19Answer { get; set; }
 
         [Display(Name = "1. 您申请企业家移民的主要目的是？")]
         public string S2Q1Answer { get; set; }
@@ -133,7 +145,7 @@ namespace SurveyMVCLogin1.Models
         // 得分：S2Q10 0/10
         public int S2Q9Score { get; set; }
 
-        [Display(Name = "9. 资金证明的主要要求是什么？")]
+        [Display(Name = "10. 资金证明的主要要求是什么？")]
         public string S2Q10Answer { get; set; }
 
         // 得分：S2Q10 0/10
@@ -379,6 +391,24 @@ namespace SurveyMVCLogin1.Models
         [Display(Name = "57. 家属是否打算工作？")]
         public string S4aQ57Answer { get; set; }
 
+        [Display(Name = "58. 家属是否打算工作？")]
+        public string S4aQ58Answer { get; set; }
+
+        [Display(Name = "59. 家属是否打算工作？")]
+        public string S4aQ59Answer { get; set; }
+
+        [Display(Name = "60. 家属是否打算工作？")]
+        public string S4aQ60Answer { get; set; }
+
+        [Display(Name = "61. 家属是否打算工作？")]
+        public string S4aQ61Answer { get; set; }
+
+        [Display(Name = "62. 家属是否打算工作？")]
+        public string S4aQ62Answer { get; set; }
+
+        [Display(Name = "63. 家属是否打算工作？")]
+        public string S4aQ63Answer { get; set; }
+
         // 英国创业项目测试 - 加入创业
         [Display(Name = "1. 进入英国的目的是什么？")]
         public string S4bQ1Answer { get; set; }
@@ -539,28 +569,34 @@ namespace SurveyMVCLogin1.Models
         [Display(Name = "53. 上一次进入英国是什么时候？")]
         public string S4bQ53Answer { get; set; }
 
-        [Display(Name = "54. 是否在英国有贸易或者商业工作经验？")]
+        [Display(Name = "54. 是否在英国有过工作经验？")]
         public string S4bQ54Answer { get; set; }
 
-        [Display(Name = "55. 资金来源是什么？")]
+        [Display(Name = "55. 是否此工作经验与申请加入企业相关？")]
         public string S4bQ55Answer { get; set; }
 
-        [Display(Name = "56. 如果是父母赠与，父母的工作单位是什么，年薪多少？")]
+        [Display(Name = "56. 资金来源是什么？")]
         public string S4bQ56Answer { get; set; }
 
-        [Display(Name = "57. 如果商业失败怎么办？")]
+        [Display(Name = "57. 如果是父母赠与，父母的工作单位是什么，年薪多少？")]
         public string S4bQ57Answer { get; set; }
 
-        [Display(Name = "58. 你打算居住在哪里？")]
+        [Display(Name = "58. 如果商业失败怎么办？")]
         public string S4bQ58Answer { get; set; }
 
-        [Display(Name = "59. 一年的生活成本是多少？")]
+        [Display(Name = "59. 你打算居住在哪里？")]
         public string S4bQ59Answer { get; set; }
 
-        [Display(Name = "60. 有没有家属同行？")]
+        [Display(Name = "60. 一年的生活成本是多少？")]
         public string S4bQ60Answer { get; set; }
 
-        [Display(Name = "61. 家属是否打算工作？")]
+        [Display(Name = "61. 有没有家属同行？")]
         public string S4bQ61Answer { get; set; }
+
+        [Display(Name = "62. 家属是否打算工作？")]
+        public string S4bQ62Answer { get; set; }
+
+        [Display(Name = "63. 未满18岁子女是否来英国上学？")]
+        public string S4bQ63Answer { get; set; }
     }
 }
